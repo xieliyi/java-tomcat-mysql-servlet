@@ -1,0 +1,28 @@
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">  
+		<title>查询</title>  
+	</head> 
+
+	<body bgcolor="white">
+		<h3>查询</h3>  
+		<hr>  
+		<form action="InquireServlet" method="post" onsubmit="return submitFun()"><br>   
+			SN：
+			<input type="text" name="sn" id="sn"/><br><br>    
+			<input type="submit" value="查询"/> 
+		</form>  
+	</body>
+
+</html>
+
+<script>
+	function submitFun()
+	{
+		if(!document.getElementById("sn").value) {
+			alert("请输入SN!");
+			document.getElementById("sn").focus();
+			return false;
+		}
+	}
+</script>
